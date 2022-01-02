@@ -25,14 +25,16 @@ public class UserService implements UserDetailsService {
             return false;
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        userRepository.save(User.builder()
+        return userRepository.save(User.builder()
                 .email(userLoginDto.getEmail())
                 .password(encoder.encode(userLoginDto.getPassword()))
                 .phone(userLoginDto.getPhone())
                 .name(userLoginDto.getName())
                 .title(null)
                 .website(null)
-                }
+                .profileImage("/img/default_profile.jpg")
+                .build());
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

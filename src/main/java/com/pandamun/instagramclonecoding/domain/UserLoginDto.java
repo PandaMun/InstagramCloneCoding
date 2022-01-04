@@ -14,6 +14,7 @@ public class UserLoginDto {
     private String password;
     private String phone;
     private String name;
+    private String title;
 
 }
 

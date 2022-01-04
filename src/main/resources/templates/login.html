@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/XSL/Transfo">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="../static/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/login.css" rel="stylesheet" type="text/css" />
+
+    <!-- favicon -->
+    <link rel="icon" href="../static/img/favicon.png">
+    <link rel="instagram-icon" href="../static/img/favicon.png">
+
+</head>
+<body>
+<div class="container">
+    <form action="/loginForm" method="post">
+        <img class="logo_instagram" src="../static/img/logo_text.png" alt="instagram_logo">
+        <input type="text" class="username" name="username" id="username" placeholder="이메일">
+        <input type="password" class="password" name="password" id="password" placeholder="비밀번호">
+        <button id="btn_login" disabled>로그인</button>
+    </form>
+</div>
+</body>
+</html>
